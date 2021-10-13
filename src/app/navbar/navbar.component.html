@@ -1,10 +1,14 @@
 <nav>
   <div class="topnav">
-    <a [routerLink]="['/users']" *ngIf="loggedIn">Users</a>
     <a [routerLink]="['/articles']">Articles</a>
-    <a [routerLink]="['/articles/create']" *ngIf="loggedIn">New Article</a>
-    <a [routerLink]="['/login']" *ngIf="!loggedIn">Login</a>
-    <a [routerLink]="['/register']" *ngIf="!loggedIn">Register</a>
-    <a [routerLink]="['/logout']" *ngIf="loggedIn">Logout</a>
+    <div *ngIf="!loggedIn">
+      <a [routerLink]="['/login']" *ngIf="!loggedIn">Login</a>
+      <a [routerLink]="['/register']" *ngIf="!loggedIn">Register</a>
+    </div>
+    <div *ngIf="loggedIn">
+      <a [routerLink]="['/articles/create']" *ngIf="loggedIn">New Article</a>
+      <a [routerLink]="['/users']" *ngIf="loggedIn">Users</a>
+      <a [routerLink]="['/logout']" *ngIf="loggedIn">Logout</a>
+    </div>
   </div>
 </nav>

@@ -1,34 +1,32 @@
-<div class="card login-form">
-    <form (ngSubmit)="register()" id="registrationForm" class="card-body">
-        <h1 class="card-title text-center">Create an Account</h1>
+<h1 class="card-title text-center">Create an Account</h1>
 
-        <div class="form-group">
-            <label for="first_name">First Name</label>
-            <input type="text" [(ngModel)]="user.first_name" name="first_name" class="form-control" required>
-        </div>
+<div class="container">
+    <div class="row">
+        <form (ngSubmit)="register()" id="registrationForm" class="card-body"> 
+        
+            <div class="col">
+                <label for="first_name">First Name</label>
+                <input type="text" [(ngModel)]="user.first_name" name="first_name" class="form-control" required>
 
-        <div class="form-group">
-            <label for="last_name">Last Name</label>
-            <input type="text" [(ngModel)]="user.last_name" name="last_name" class="form-control" required>
-        </div>
+                <label for="username">Username</label>
+                <input type="text" [(ngModel)]="user.username" name="username" class="form-control" required>
 
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" [(ngModel)]="user.username" name="username" class="form-control" required>
-        </div>
+                <label for="password">Password</label>
+                <input type="password" [(ngModel)]="user.password" name="password" class="form-control" required>
 
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" [(ngModel)]="user.email" name="email" class="form-control" required>
-        </div>
+                <input type="submit" value="Register">
+            </div>
 
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" [(ngModel)]="user.password" name="password" class="form-control" required>
-        </div>
+            <div class="col">
+                <label for="last_name">Last Name</label>
+                <input type="text" [(ngModel)]="user.last_name" name="last_name" class="form-control" required>
 
-        <div>
-            <input type="submit" value="Register">
-        </div>
-    </form>
+                <label for="email">Email</label>
+                <input type="email" [(ngModel)]="user.email" name="email" class="form-control" required>
+            </div>
+
+            
+
+        </form>
+    </div>
 </div>

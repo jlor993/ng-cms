@@ -1,14 +1,20 @@
-<form (ngSubmit)="login()">
+<h1 class="card-title text-center">Login</h1>
 
-  <div *ngIf="error" class="alert-error">Invalid Credentials</div>
-
-  <label>Username</label>
-  <input [(ngModel)]="user.username" name="username">
-  <br/>
-
-  <label>Password</label>
-  <input [(ngModel)]="user.password" name="password">
-  <br/>
-  
-  <input type="submit">
-</form>
+<div class="container">
+  <form (ngSubmit)="login()">
+    <div class="row">
+      <div class="col">
+        <div *ngIf="error" class="alert-error">Invalid Credentials</div>
+    
+        <label>Username</label>
+        <input [(ngModel)]="user.username" name="username">
+        <br/>
+    
+        <label>Password</label>
+        <input [(ngModel)]="user.password" name="password">
+        <br/>
+        <input type="submit">
+      </div>
+    </div>
+  </form>
+</div>
