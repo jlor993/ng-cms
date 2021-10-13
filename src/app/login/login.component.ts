@@ -27,8 +27,7 @@ export class LoginComponent implements OnInit {
         if(response.success == false){
           this.error=true;
         }
-        else
-        {
+        else {
           this.router.navigate(['/users']);
         }
 
