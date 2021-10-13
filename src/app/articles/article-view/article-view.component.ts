@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 
+import { AuthService } from 'src/app/services/auth.service';
 import { ArticleService } from '../../services/article.service';
 import { Article } from '../../models/article';
 
@@ -13,12 +14,14 @@ import { Article } from '../../models/article';
 export class ArticleViewComponent implements OnInit {
 
   article: Article;
+  loggedIn: boolean;
 
-  constructor(private route: ActivatedRoute, private router: Router, private articleService: ArticleService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private articleService: ArticleService, private authService: AuthService) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.getArticle(id);
+    this.loggedIn = this.authService.isAuthenticated();
   }
 
   getArticle(id): void {

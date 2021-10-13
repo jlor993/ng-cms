@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { User } from '../models/user';
 
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   user:User = new User();
   error: any;
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
   }
@@ -25,6 +26,10 @@ export class LoginComponent implements OnInit {
 
         if(response.success == false){
           this.error=true;
+        }
+        else
+        {
+          this.router.navigate(['/users']);
         }
 
       }
