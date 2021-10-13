@@ -9,10 +9,12 @@ import { ArticlesComponent }   from './articles/articles.component';
 import { ArticleViewComponent }   from './articles/article-view/article-view.component';
 import { ArticleCreateComponent }   from './articles/article-create/article-create.component';
 import { ArticleEditComponent }   from './articles/article-edit/article-edit.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent},
   { path: 'users', component: UsersComponent },
   { path: 'users/view/:id', component: UserViewComponent },
   { path: 'users/create', component: UserCreateComponent },
