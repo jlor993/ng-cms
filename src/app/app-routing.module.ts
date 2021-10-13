@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
+import { RegisterComponent } from './register/register.component';
 import { UsersComponent }   from './users/users.component';
 import { UserViewComponent }   from './users/user-view/user-view.component';
 import { UserCreateComponent }   from './users/user-create/user-create.component';
@@ -9,11 +12,11 @@ import { ArticlesComponent }   from './articles/articles.component';
 import { ArticleViewComponent }   from './articles/article-view/article-view.component';
 import { ArticleCreateComponent }   from './articles/article-create/article-create.component';
 import { ArticleEditComponent }   from './articles/article-edit/article-edit.component';
-import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+  { path: 'logout', component: LogoutComponent },
   { path: 'register', component: RegisterComponent},
   { path: 'users', component: UsersComponent },
   { path: 'users/view/:id', component: UserViewComponent },

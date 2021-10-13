@@ -1,6 +1,0 @@
-Run "ng serve --open" inside folder
-Need to implement:
-    -Register
-    -Logout
-    -Actually being logged in
-    -Not being able to access pages/features if not logged in

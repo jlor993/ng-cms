@@ -15,6 +15,7 @@ import { ArticleEditComponent } from './articles/article-edit/article-edit.compo
 import { ArticleViewComponent } from './articles/article-view/article-view.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { RegisterComponent } from './register/register.component';
     ArticleEditComponent,
     ArticleViewComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
